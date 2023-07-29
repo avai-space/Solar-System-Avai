@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+</head>
+<body>
+    <canvas class="webgl"></canvas>
+
+    <button id="startButton">Start</button>
+    <button id="quizButton">FAQ</button>
+    <div class="container" style="display: none; font-size: xx-small;">
+      
+      <!-- <button id="TestButton">Test</button> -->
+
+      <div id="container-sun-quiz" class="container" style="display: none;">
+        Quiz content for the Sun
+      </div>
+
+      <div id="container-mercury-quiz" class="container" style="display: none;">
+        Quiz content for Mercury
+        
+      </div>
+  
+      <div id="container-venus-quiz" class="container" style="display: none;">
+        Quiz content for Venus
+        
+      </div>
+  
+      <div id="container-earth-quiz" class="container" style="display: none;">
+        Quiz content for Earth
+        
+      </div>
+  
+      <div id="container-mars-quiz" class="container" style="display: none;">
+        Quiz content for Mars
+        
+      </div>
+  
+      <div id="container-jupiter-quiz" class="container" style="display: none;">
+        Quiz content for Jupiter
+        
+      </div>
+  
+      <div id="container-saturn-quiz" class="container" style="display: none;">
+        Quiz content for Saturn
+        
+      </div>
+  
+      <div id="container-uranus-quiz" class="container" style="display: none;">
+        Quiz content for Uranus
+        
+      </div>
+  
+      <div id="container-neptune-quiz" class="container" style="display: none;">
+        Quiz content for Neptune
+        
+      </div>
+  
+      
+      
+      <div id="container-sun" class="container" style="display:none;">
+        <button class="test-button" id="TestButton" data-planet="sun">Test</button>
+       
+        <button class="speech-button" id="speechButton" data-planet="sun">Speech</button>
+        Information about the Sun
+      </div>
+      
+      
+      
+      <div id="container-mercury" class="container" style="display:none;">
+        <button class="test-button" id="TestButton" data-planet="mercury">Test</button>
+        
+        <button class="speech-button" id="speechButton" data-planet="mercury">Speech</button>
+        Mercury - The Swiftest Planet
+        - Characteristics: Mercury is the smallest and closest planet to the Sun in our solar system. It
+        has no atmosphere or significant magnetic field.
+        - Surface Features: Mercury's surface is covered in impact craters and basins. It experiences
+        extreme temperature variations, ranging from scorching hot during the day to freezing cold at
+        night.
+        - Exploration: NASA's MESSENGER spacecraft orbited Mercury from 2011 to 2015, providing
+        valuable data about its composition and surface.
+        - FAQ:
+        - Q: Why is Mercury so hot during the day and cold at night?
+        - A: Due to its lack of atmosphere, Mercury has no way to retain heat. During the day, its
+        surface absorbs heat from the Sun, causing extreme temperatures. At night, without an
+        atmosphere to trap the heat, it rapidly cools down.
+     </div>
+
+     
+      
+     <div id="container-venus" class="container" style="display: none;">
+      <button class="test-button" id="TestButton" data-planet="venus">Test</button>
+      
+      <button class="speech-button" id="speechButton" data-planet="venus">Speech</button> 
+        Venus - The Hottest Planet
+        - Characteristics: Venus is similar in size and mass to Earth, often called its "sister planet." It
+        has a thick, toxic atmosphere mainly composed of carbon dioxide.
+        - Surface Features: Venus' surface is dominated by vast plains, highland regions, and
+        volcanoes, including the largest volcano called Maat Mons.
+        - Exploration: Various missions, including the Soviet Venera program and NASA's Magellan
+        orbiter, have provided detailed radar mapping and observations of Venus.
+        - FAQ:
+        - Q: Why is Venus called Earth's "sister planet"?
+        - A: Venus and Earth are similar in size, mass, and composition, but they have vastly
+        different atmospheres and surface conditions.
+        - Q: What makes its atmosphere so inhospitable?
+        - A: Venus' thick atmosphere traps heat, leading to a runaway greenhouse effect, resulting
+        in surface temperatures hot enough to melt lead.
+
+      </div>
+      
+      
+      <div id="container-earth" class="container" style="display: none;">
+        <button class="test-button" id="TestButton" data-planet="earth">Test</button>
+      
+        <button class="speech-button" id="speechButton" data-planet="earth">Speech</button>
+        Earth - Our Home Planet
+        - Characteristics: Earth is the third planet from the Sun and the only known planet to support
+        life. It has a diverse atmosphere, mainly composed of nitrogen and oxygen.
+        - Surface Features: Earth's surface consists of continents, oceans, mountains, and various
+        landforms shaped by weathering and erosion.
+        - Exploration: Human exploration and observation have been ongoing, but iconic events
+        include the Apollo moon missions and the study of Earth from space with satellites.
+        - FAQ:
+        - Q: What causes day and night on Earth?
+        - A: Earth rotates on its axis, causing the cycle of day and night. As it rotates, different parts
+        of the planet are exposed to the Sun's light, creating day and darkness.
+        - Q: How does Earth's atmosphere protect us?
+        - A: Earth's atmosphere acts as a shield, absorbing harmful solar radiation and protecting
+        us from space debris. It also helps regulate the planet's temperature, making it habitable.
+
+      </div>
+      
+      
+      <div id="container-mars" class="container" style="display: none;">
+        <button class="test-button" id="TestButton" data-planet="mars">Test</button>
+      
+        <button class="speech-button" id="speechButton" data-planet="mars">Speech</button>
+        Mars - The Red Planet
+        - Characteristics: Mars is known for its reddish appearance due to iron oxide (rust) on its
+        surface. It has a thin atmosphere composed mainly of carbon dioxide.
+        - Surface Features: Mars features volcanoes, canyons, and vast desert-like plains. The largest
+        volcano in the solar system, Olympus Mons, is found on Mars.
+        - Exploration: Various missions, including NASA's rovers like Curiosity and Perseverance,
+        have provided valuable data about Mars' geology and potential habitability.
+        - FAQ:
+        - Q: What makes Mars appear red?
+        - A: Mars' iron-rich surface and dust particles give it a reddish hue, similar to rusted iron.
+        - Q: Could Mars ever support human life?
+        - A: Scientists are exploring the possibility of terraforming Mars to make it habitable, but
+        currently, its harsh conditions and lack of a breathable atmosphere make it inhospitable.
+
+      </div>
+      
+      
+      <div id="container-jupiter" class="container" style="display: none;">
+        <button class="test-button" id="TestButton" data-planet="jupiter">Test</button>
+      
+        <button class="speech-button" id="speechButton" data-planet="jupiter">Speech</button>
+        Jupiter - The Gas Giant
+        - Characteristics: Jupiter is the largest planet in our solar system, primarily composed of
+        hydrogen and helium. It has a prominent system of belts and zones.
+        - Moons: Jupiter has 79 known moons, including the four largest called the Galilean moons:
+        Io, Europa, Ganymede, and Callisto.
+        - Exploration: NASA's Galileo mission and the Juno spacecraft have provided in-depth insights
+        into Jupiter's atmosphere and its massive magnetic field.
+        - FAQ:
+        - Q: Why is Jupiter called the "King of the Planets"?
+        - A: Jupiter's immense size and powerful magnetic field dominate the solar system,
+        significantly influencing nearby objects.
+        - Q: What role does Jupiter play in protecting the inner planets?
+        - A: Jupiter's strong gravitational pull acts as a gravitational shield, diverting some asteroids
+        and comets that might otherwise collide with Earth or other inner planets.
+
+
+      </div>
+      
+      
+      <div id="container-saturn" class="container" style="display: none;">
+        <button class="test-button" id="TestButton" data-planet="saturn">Test</button>
+      
+        <button class="speech-button" id="speechButton" data-planet="saturn">Speech</button>
+        Saturn - The Ringed Beauty
+        - Characteristics: Saturn is famous for its stunning and extensive ring system, composed
+        mostly of ice particles. It is the least dense planet in our solar system.
+        - Surface Features: Saturn's surface is composed mainly of hydrogen and helium. Its rings are
+        made up of countless icy particles and small rocks.
+        - Exploration: The Cassini spacecraft provided detailed observations of Saturn's rings,
+        atmosphere, and moons, enriching our understanding of this gas giant.
+        - FAQ:
+        - Q: How were Saturn's rings formed?
+        - A: The exact origin of Saturn's rings is still debated, but they are likely remnants of a moon
+        or comet that was shattered by tidal forces or a collision.
+        - Q: What makes Saturn the least dense planet?
+        - A: Saturn's low density is due to its primarily gaseous composition, making it less dense
+        than Earth, even though it is much larger.
+
+      </div>
+      
+      
+      <div id="container-uranus" class="container" style="display: none;">
+        <button class="test-button" id="TestButton" data-planet="uranus">Test</button>
+      
+        <button class="speech-button" id="speechButton" data-planet="uranus">Speech</button>
+        Uranus - The Tilted Planet
+        - Characteristics: Uranus is unique among the planets as it rotates almost on its side, leading
+        to extreme axial tilts.
+        - Color and Temperature: Uranus has a blue-green color, attributed to methane in its
+        atmosphere. It is also one of the coldest planets in our solar system.
+        - Exploration: Voyager 2 conducted a flyby of Uranus in 1986, providing valuable data about
+        its atmosphere, rings, and moons.
+        - FAQ:
+        - Q: What causes Uranus' unusual tilt?
+        - A: The exact cause of Uranus' extreme axial tilt is not fully understood, but it may have
+        been the result of a massive collision with another celestial object in the distant past.
+        - Q: How was Uranus discovered?
+        - A: Uranus was first observed by Sir William Herschel in 1781, making it the first planet to
+        be discovered with a telescope.
+
+      </div>
+      
+      
+      <div id="container-neptune" class="container" style="display: none;">
+        <button class="test-button" id="TestButton" data-planet="neptune">Test</button>
+      
+        <button class="speech-button" id="speechButton" data-planet="neptune">Speech</button>
+        Neptune - The Farthest Planet
+        - Characteristics: Neptune is the eighth and farthest known planet from the Sun. It is a vivid
+        blue color, attributed to methane in its atmosphere.
+        - Surface Features: Neptune has storm systems, including the famous Great Dark Spot, which
+        comes and goes over time.
+        - Exploration: Voyager 2 also visited Neptune in 1989, providing insights into its atmosphere,
+        storms, and moons.
+        - FAQ:
+        - Q: What makes Neptune the windiest planet?
+        - A: Neptune's powerful winds can reach speeds of up to 1,500 miles per hour (2,400
+        kilometers per hour), making it the windiest planet in our solar system.
+        - Q: Why is Neptune considered an "ice giant"?
+        - A: Neptune, like Uranus, is composed mostly of hydrogen, helium, and ices like water,
+        ammonia, and methane.
+
+      </div>
+      
+      <div class="quizcontainer" style=" display: none">
+      <h2 class="quiz_text"> </h2>
+        <ul>
+          <li>
+            <input type="radio" id="a_1" name="selection">
+            <label for="a_1" class="a_text"></label>
+            <svg width="20" height="20">
+              <polyline class="tick" points="4,9 8,13 14,5" />
+            </svg>
+          </li>
+          <li>
+            <input type="radio" id="a_2" name="selection">
+            <label for="a_2" class="b_text"></label>
+            <svg width="20" height="20">
+              <polyline class="tick" points="4,9 8,13 14,5" />
+            </svg>
+          </li>
+          <li>
+            <input type="radio" id="a_3" name="selection">
+            <label for="a_3" class="c_text"></label>
+            <svg width="20" height="20">
+              <polyline class="tick" points="4,9 8,13 14,5" />
+            </svg>
+          </li>
+          <li>
+            <input type="radio" id="a_4" name="selection">
+            <label for="a_4" class="d_text"></label>
+            <svg width="20" height="20">
+              <polyline class="tick" points="4,9 8,13 14,5" />
+            </svg>
+          </li>
+        </ul>
+        <div class="next">
+          <svg width="80" height="48">
+            <polyline class="nextline" points="21,27 57,27 47,17 57,27 47,37" />
+          </svg>
+        </div>
+        <div class="prev">
+          <svg width="80" height="48">
+            <polyline class="prevline" points="57,27 21,27 31,18 21,27 31,38" />
+          </svg>
+        </div>
+        <span class="correct_answer">
+          Check Answer
+        </span>
+
+
+      </div>
+      </div>
+    </div> 
+      </div>
+      
+    
+</body>
+</html>
